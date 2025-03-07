@@ -36,25 +36,25 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.registrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clumcodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clumOrigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clumDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clumFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.reservarBtn = new System.Windows.Forms.Button();
             this.cantidasAsientoNup = new System.Windows.Forms.NumericUpDown();
-            this.DestinoCb = new System.Windows.Forms.ComboBox();
-            this.origenCb = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidasAsientoNup)).BeginInit();
             this.SuspendLayout();
             // 
             // codigo
             // 
-            this.codigo.Location = new System.Drawing.Point(36, 24);
+            this.codigo.Location = new System.Drawing.Point(25, 25);
             this.codigo.Name = "codigo";
             this.codigo.Size = new System.Drawing.Size(100, 20);
             this.codigo.TabIndex = 0;
@@ -62,27 +62,32 @@
             // 
             // destino
             // 
-            this.destino.Location = new System.Drawing.Point(36, 131);
+            this.destino.Location = new System.Drawing.Point(23, 131);
             this.destino.Name = "destino";
             this.destino.Size = new System.Drawing.Size(100, 20);
             this.destino.TabIndex = 2;
             // 
             // origen
             // 
-            this.origen.Location = new System.Drawing.Point(36, 76);
+            this.origen.Location = new System.Drawing.Point(23, 76);
             this.origen.Name = "origen";
             this.origen.Size = new System.Drawing.Size(100, 20);
             this.origen.TabIndex = 3;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(59, 258);
+            this.numericUpDown1.Location = new System.Drawing.Point(25, 258);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 4;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.registrar);
             this.panel1.Controls.Add(this.origen);
@@ -113,53 +118,29 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Controls.Add(this.reservarBtn);
             this.panel2.Controls.Add(this.cantidasAsientoNup);
             this.panel2.Location = new System.Drawing.Point(268, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(596, 251);
+            this.panel2.Size = new System.Drawing.Size(649, 378);
             this.panel2.TabIndex = 6;
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clumcodigo,
-            this.clumOrigen,
-            this.clumDestino,
-            this.clumFecha});
-            this.dataGridView1.Location = new System.Drawing.Point(118, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(428, 206);
-            this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // clumcodigo
-            // 
-            this.clumcodigo.HeaderText = "Codigo";
-            this.clumcodigo.Name = "clumcodigo";
-            // 
-            // clumOrigen
-            // 
-            this.clumOrigen.HeaderText = "Origen";
-            this.clumOrigen.Name = "clumOrigen";
-            // 
-            // clumDestino
-            // 
-            this.clumDestino.HeaderText = "Destino";
-            this.clumDestino.Name = "clumDestino";
-            // 
-            // clumFecha
-            // 
-            this.clumFecha.HeaderText = "Fecha Salida";
-            this.clumFecha.Name = "clumFecha";
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(109, 35);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(533, 299);
+            this.dataGridView2.TabIndex = 7;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
             // reservarBtn
             // 
-            this.reservarBtn.Location = new System.Drawing.Point(11, 111);
+            this.reservarBtn.Location = new System.Drawing.Point(11, 141);
             this.reservarBtn.Name = "reservarBtn";
-            this.reservarBtn.Size = new System.Drawing.Size(75, 23);
+            this.reservarBtn.Size = new System.Drawing.Size(75, 43);
             this.reservarBtn.TabIndex = 3;
             this.reservarBtn.Text = "Reservar";
             this.reservarBtn.UseVisualStyleBackColor = true;
@@ -167,45 +148,82 @@
             // 
             // cantidasAsientoNup
             // 
-            this.cantidasAsientoNup.Location = new System.Drawing.Point(11, 25);
+            this.cantidasAsientoNup.Location = new System.Drawing.Point(11, 35);
             this.cantidasAsientoNup.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.cantidasAsientoNup.Name = "cantidasAsientoNup";
-            this.cantidasAsientoNup.Size = new System.Drawing.Size(60, 20);
+            this.cantidasAsientoNup.Size = new System.Drawing.Size(75, 20);
             this.cantidasAsientoNup.TabIndex = 2;
             // 
-            // DestinoCb
+            // label1
             // 
-            this.DestinoCb.FormattingEnabled = true;
-            this.DestinoCb.Location = new System.Drawing.Point(581, 368);
-            this.DestinoCb.Name = "DestinoCb";
-            this.DestinoCb.Size = new System.Drawing.Size(121, 21);
-            this.DestinoCb.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Codigo Vuelo";
             // 
-            // origenCb
+            // label2
             // 
-            this.origenCb.FormattingEnabled = true;
-            this.origenCb.Location = new System.Drawing.Point(580, 304);
-            this.origenCb.Name = "origenCb";
-            this.origenCb.Size = new System.Drawing.Size(121, 21);
-            this.origenCb.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Origen ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Destino";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 185);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Fecha de salida";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 242);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Numero de Puestos";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(166, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Numero de asientos para reservar";
             // 
             // Reservas
             // 
-            this.ClientSize = new System.Drawing.Size(889, 445);
+            this.ClientSize = new System.Drawing.Size(922, 445);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.origenCb);
-            this.Controls.Add(this.DestinoCb);
             this.Name = "Reservas";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidasAsientoNup)).EndInit();
             this.ResumeLayout(false);
 
@@ -232,14 +250,14 @@
         private System.Windows.Forms.Button registrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.NumericUpDown cantidasAsientoNup;
-        private System.Windows.Forms.ComboBox DestinoCb;
-        private System.Windows.Forms.ComboBox origenCb;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button reservarBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clumcodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clumOrigen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clumDestino;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clumFecha;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
     }
 }

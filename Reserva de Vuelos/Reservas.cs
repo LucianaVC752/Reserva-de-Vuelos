@@ -13,38 +13,31 @@ namespace Reserva_de_Vuelos
 {
     public partial class Reservas : Form
     {
-        BindingSource bs = new BindingSource();
+
         ErrorProvider errorP = new ErrorProvider();
         Vuelo vueloSeleccionado = null;
         public Reservas()
         {
             InitializeComponent();
+             dataGridView2.AutoGenerateColumns = true;
             CargarData();
         }
 
         private void Reservas_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void CargarData()
         {
-            //bs.DataSource = VuelosLista.ListaVuelos;
-            //origenCb.DataSource = bs;
-            //origenCb.DisplayMember = "OrigenVuelo";
-            //DestinoCb.DataSource = bs;
-            //DestinoCb.DisplayMember = "DestinoVuelo";
-            dataGridView1.Rows.Clear();
             var vuelosDisponibles = VuelosLista.ListaVuelos
-                                   .Where(v => v.CantidadPuestos > 0) 
-                                   .ToList();
-          
-            foreach (var vuelo in vuelosDisponibles)
-            {
-                dataGridView1.Rows.Add(vuelo.Codigo,vuelo.OrigenVuelo,vuelo.DestinoVuelo, vuelo.FechaSalida);
-            }
+                           .Where(v => v.CantidadPuestos > 0)
+                           .ToList();
+            dataGridView2.DataSource = null;  
+            dataGridView2.DataSource = vuelosDisponibles;
+
         }
-        
+
 
 
         private bool ValidarTextBoxEnPanel(Panel panel)
@@ -58,7 +51,7 @@ namespace Reserva_de_Vuelos
                 }
                 else
                 {
-                    errorP.SetError(control, ""); // Limpia el error si está lleno
+                    errorP.SetError(control, "");
                 }
             }
             return true;
@@ -67,7 +60,7 @@ namespace Reserva_de_Vuelos
         private bool ValidarFecha()
         {
             DateTime fechaSeleccionada = dateTimePicker1.Value;
-            DateTime fechaPorDefecto = DateTime.Now; // O cualquier otra fecha inicial
+            DateTime fechaPorDefecto = DateTime.Now; // 
 
             if (fechaSeleccionada == fechaPorDefecto)
             {
@@ -89,16 +82,16 @@ namespace Reserva_de_Vuelos
             try
             {
                 int cantidadPuestos = Convert.ToInt32(numericUpDown1.Value);
-                if (ValidarTextBoxEnPanel(panel1) && ValidarFecha() &&(cantidadPuestos>0))
+                if (ValidarTextBoxEnPanel(panel1) && ValidarFecha() && (cantidadPuestos > 0))
                 {
                     RegistrarVuelo(cantidadPuestos);
                     MessageBox.Show("Vuelo registrado");
                     CargarData();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al registrar el vuelo "+ex);
+                MessageBox.Show("Ocurrió un error al registrar el vuelo " + ex);
             }
         }
 
@@ -120,24 +113,6 @@ namespace Reserva_de_Vuelos
             VuelosLista.ListaVuelos.Add(vueloRegistrar);
         }
 
-        private bool cbVacio()
-        {
-            if (string.IsNullOrEmpty(origenCb.Text) || origenCb.SelectedIndex == -1)
-            {
-                origenCb.Focus();
-                errorP.SetError(origenCb, "No puede dejar vacio");
-                return false;
-            }
-            if (string.IsNullOrEmpty(DestinoCb.Text) || DestinoCb.SelectedIndex == -1)
-            {
-                origenCb.Focus();
-                errorP.SetError(DestinoCb, "No puede dejar vacio");
-                return false;
-            }
-            return true;
-            
-        }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -150,15 +125,14 @@ namespace Reserva_de_Vuelos
             {
                 MessageBox.Show("Hubo un error al hacer la reserva: " + ex);
             }
-            
+
         }
 
         private void ValidarReserva(int cantidadVuelos)
         {
             try
             {
-                //var resultado = VuelosLista.ListaVuelos.Where(e => e.OrigenVuelo.Contains(origenVuelo.OrigenVuelo) && e.DestinoVuelo.Contains(destinoVuelo.DestinoVuelo)).ToList();
-
+               
                 int cantidadPuestos = Convert.ToInt32(cantidasAsientoNup.Value);
                 if (vueloSeleccionado == null)
                 {
@@ -178,27 +152,28 @@ namespace Reserva_de_Vuelos
                 vueloSeleccionado.CantidadPuestos -= asientosReservados;
 
                 MessageBox.Show($"Reserva realizada con éxito. {asientosReservados} asientos reservados.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Refrescar el DataGridView
                 CargarData();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Hubo un error al hacer la reserva: " + ex);
             }
-            
+
 
         }
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView2.SelectedRows.Count > 0)
             {
-                vueloSeleccionado = (Vuelo)dataGridView1.SelectedRows[0].DataBoundItem;  
+                vueloSeleccionado = dataGridView2.SelectedRows[0].DataBoundItem as Vuelo;
+
+                if (vueloSeleccionado != null)
+                {
+                    MessageBox.Show($"Vuelo seleccionado: {vueloSeleccionado.OrigenVuelo} → {vueloSeleccionado.DestinoVuelo}");
+                }
             }
         }
-
-      
     }
 }
