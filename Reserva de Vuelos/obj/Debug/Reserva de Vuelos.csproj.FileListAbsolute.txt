@@ -1,0 +1,10 @@
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\obj\Debug\Reserva de Vuelos.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\obj\Debug\Reserva_de_Vuelos.Properties.Resources.resources
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\obj\Debug\Reserva_de_Vuelos.Reservas.resources
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\obj\Debug\Reserva de Vuelos.csproj.GenerateResource.cache
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\obj\Debug\Reserva de Vuelos.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\bin\Debug\Reserva de Vuelos.exe.config
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\bin\Debug\Reserva de Vuelos.exe
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\bin\Debug\Reserva de Vuelos.pdb
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\obj\Debug\Reserva de Vuelos.exe
+C:\Users\hp\OneDrive - pascualbravo.edu.co\Herramientas II\Reserva de Vuelos\Reserva de Vuelos\obj\Debug\Reserva de Vuelos.pdb
